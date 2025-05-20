@@ -2,9 +2,7 @@ import streamlit as st
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_openai import ChatOpenAI
 
-f=open('/Users/aditi/API_KEY/OPEN_AI_KEY.txt')
-open_api_key = f.read()
-
+open_api_key = st.secrets["openai"]["api_key"]
 import os
 os.environ['Open_api_key']=open_api_key
 
