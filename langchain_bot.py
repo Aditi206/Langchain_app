@@ -4,7 +4,7 @@ from langchain_openai import ChatOpenAI
 
 open_api_key = st.secrets["openai"]["api_key"]
 import os
-os.environ['Open_api_key']=open_api_key
+os.environ['open_api_key']=open_api_key
 
 st.title('I am Your Langchain AI....')
 
@@ -19,7 +19,7 @@ for msg in st.session_state["messages"]:
 
 #Creating LLM
 
-chatgpt = ChatOpenAI(model_name ='gpt-4o-mini', api_key=open_api_key)
+chatgpt = ChatOpenAI(model_name ='gpt-3.5-turbo', api_key=open_api_key)
 
 query = st.chat_input("Enter your question:")
 
